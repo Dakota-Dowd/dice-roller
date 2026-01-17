@@ -4,14 +4,16 @@ using System.Text;
 
 namespace Mission_2_Assignment
 {
+    // A class to roll dice and return results
     internal class DiceRoller
     {
         private Random rnd = new Random();
 
-        // Returns an array where index is the sum(2-12)
-        public int[] RollDice(int numRolls)
+        // Method to roll two dice
+        public int[] RollDice(int numRolls) // Accepts number of rolls from user
         {
             int[] counts = new int[13];
+            // Rolls dice and stores sums
             for (int i = 0; i < numRolls; i++)
             {
                 int die1 = rnd.Next(1, 7);
